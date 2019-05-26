@@ -1,0 +1,12 @@
+name: Capstone_Wordprediction
+title: Capstone_Wordprediction
+username:
+account: idejong
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 949601
+bundleId: 2109596
+url: https://idejong.shinyapps.io/Capstone_Wordprediction/
+when: 1558885647.76769
+asMultiple: FALSE
+asStatic: FALSE
