@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<head>
+  <title>A Shiny Application</title>
+  <link rel="stylesheet" href="libraries/frameworks/flowtime/assets/css/reset.css">
+  <link rel="stylesheet" href="libraries/frameworks/flowtime/css/flowtime.css">
+  <link rel="stylesheet" href="libraries/frameworks/flowtime/css/themes/default.css">
+  <link rel="stylesheet" href="libraries/frameworks/flowtime/assets/css/prism.css">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css">  
+</head>
+<body>
+  <div class="flowtime">
+    <div class="ft-section " data-id="section-1">
+<div class="ft-page " data-title="">
+  <p><section style="text-align:center;"></p>
+
+<h1>A Shiny Application</h1>
+
+<h3>Part of the Course Project Shiny Application and Reproducible Pitch</h3>
+
+<h5>Author: idejong</h5>
+		
+</div>
+</div>
+<div class="ft-section " data-id="section-2">
+<div class="ft-page " data-title="">
+  <h2>Introduction</h2>
+
+<p>As part of the Coursera Data Science Capstone project, a prediction algorithm was developed that predicts the next word based on the previous words. The prediction alogrithm is deployed within a Shiny Application. </p>
+
+<ul>
+<li>The Shiny Application can be accessed with the link:  <a href="https://idejong.shinyapps.io/Capstone_Wordprediction/">https://idejong.shinyapps.io/Capstone_Wordprediction/</a></li>
+<li>This presentation was developed using the package slidify in R</li>
+<li>The code to reproduce the prediction algorithm, the Shiny application and the presentation can be accessed at Github using the link: <a href="https://github.com/idejong/Developing_Data_Products_CP3">https://github.com/idejong/Developing_Data_Products_CP3</a></li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+		
+</div>
+</div>
+<div class="ft-section " data-id="section-3">
+<div class="ft-page " data-title="">
+  <h2>The data</h2>
+
+<p>The input data consists of English entries of blogs, news article and twitter. This input data is available <a href="https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip">here</a>.</p>
+
+<p>The data is cleaned in the program R, for example by removing all punctuation and removing profanity words. </p>
+
+<p>Below you will find an example of the data, which is a subset of 0.1% of the data:
+<img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"></p>
+		
+</div>
+</div>
+<div class="ft-section " data-id="section-4">
+<div class="ft-page " data-title="">
+  <h2>How the prediction algorithm works</h2>
+
+<p>The prediction model is an n-gram model that predicts the next item in a sequence.</p>
+
+<ul>
+<li>The first step after the input text has been cleaned is the creation of bigrams, trigrams, and 4-grams.</li>
+<li>Using a Katz&#39;s back-off model, we estimate the probability of a word given its history in the n-gram.</li>
+</ul>
+
+<p>As an example of ngrams the most common trigrams within the input data are shown below. </p>
+
+<p><img src="assets/fig/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4"></p>
+		
+</div>
+</div>
+<div class="ft-section " data-id="section-5">
+<div class="ft-page " data-title="">
+  <h2>How the application works</h2>
+
+<ul>
+<li>The application presents the user with an input textbox where the user input&#39;s the desired phrase. </li>
+<li>After clicking the &#39;Predict!&#39; button the input is transfered to the server where the algorithm is run. </li>
+<li>While the model is run, a waiting message is presented is the right corner telling us to wait a second while the next word is predicted.</li>
+<li>Once the prediction model is finished, both the user&#39;s input phrase and the predicted next word are presented in the shiny app.</li>
+</ul>
+		
+</div>
+</div>
+<div class="ft-section " data-id="section-6">
+<div class="ft-page " data-title="">
+  		
+</div>
+</div>
+  </div>
+</body>
+  <script src="libraries/frameworks/flowtime/js/brav1toolbox.js"></script>
+  <script src="libraries/frameworks/flowtime/js/flowtime.js"></script>
+	<script src="libraries/frameworks/flowtime/assets/js/prism.js"></script>
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+    <script>
+    // Configuration API test
+		Flowtime.showProgress(true);
+		// Flowtime.fragmentsOnSide(true);
+		// Flowtime.fragmentsOnBack(true);
+		// Flowtime.useHistory(false);
+		// Flowtime.slideInPx(true);
+		// Flowtime.sectionsSlideToTop(true);
+		// Flowtime.gridNavigation(false);
+		// Flowtime.useOverviewVariant(true);
+		Flowtime.parallaxInPx(true);
+    Flowtime.start();
+  </script>
+</html>

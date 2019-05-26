@@ -1,0 +1,15 @@
+base
+ggplot2
+plotly
+NLP
+tm
+sentimentr
+stringr
+gridExtra
+SnowballC
+topicmodels
+RWeka
+knitr
+kableExtra
+slidify
+png
